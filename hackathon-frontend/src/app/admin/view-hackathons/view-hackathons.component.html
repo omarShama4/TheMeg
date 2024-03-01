@@ -1,0 +1,20 @@
+<div class="hackathon-list">
+    <h2>Available Hackathons</h2>
+    <ul>
+      <li *ngFor="let hackathon of hackathons">
+        <div class="hackathon-item">
+          <h3>{{ hackathon.name }}</h3>
+          <p><strong>Theme:</strong> {{ hackathon.theme }}</p>
+          <p><strong>Registration Dates:</strong> {{ hackathon.registrationDateRange }}</p>
+          <p><strong>Event Date:</strong> {{ hackathon.eventDate }}</p>
+          <p><strong>Challenges:</strong></p>
+          <ul>
+            <li *ngFor="let challenge of hackathon.challenges">{{ challenge }}</li>
+          </ul>
+          <p><strong>Maximum Team Size:</strong> {{ hackathon.maxTeamSize }}</p>
+          <p><strong>Maximum Number of Teams:</strong> {{ hackathon.maxTeams }}</p>
+          <button (click)="registerForHackathon(hackathon)">Register</button>
+        </div>
+      </li>
+    </ul>
+  </div>
