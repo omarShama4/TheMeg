@@ -8,6 +8,7 @@ import { HackathonService } from 'src/app/services/hackathon.service';
   styleUrls: ['./view-hackathons.component.css']
 })
 export class ViewHackathonsComponent implements OnInit {
+
   hackathons: Hackathon[] = [];
 
   constructor(private hackathonService: HackathonService) { }
@@ -25,10 +26,5 @@ export class ViewHackathonsComponent implements OnInit {
         console.error('Error loading hackathons:', error);
       }
     );
-  }
-
-  registerForHackathon(hackathon: Hackathon): void {
-    // Implement registration logic here
-    console.log('Registering for hackathon:', hackathon);
   }
 }

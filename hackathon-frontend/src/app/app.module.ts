@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
@@ -22,7 +23,8 @@ import { HackathonRegistrationComponent } from './competitor/hackathon-registrat
     HackathonRegistrationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

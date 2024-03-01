@@ -1,0 +1,27 @@
+# Node.js Dependencies
+node_modules/
+
+# Angular Specific
+/dist/
+/e2e/
+
+# Environment variables
+.env
+
+# IDE/Editor specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+/bower_components/
+/yarn-error.log
+
+# Miscellaneous
+*.DS_Store
+Thumbs.db
