@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "postgres",
+      "database": "TheMeg",
+      "host": "localhost",
+      "dialect": "postgres"
+    }
+  }

@@ -23,4 +23,7 @@ export class HackathonService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<Hackathon>(url);
   }
+  registerTeam(registrationData: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/hackathons/register`, registrationData);
+  }
 }

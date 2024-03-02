@@ -3,11 +3,13 @@ import { AuthService } from 'src/app/services/auth.service';
 import * as CryptoJS from 'crypto-js';
 
 @Component({
-  selector: 'app-competitor-login',
-  templateUrl: './competitor-login.component.html',
-  styleUrls: ['./competitor-login.component.css'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class CompetitorLoginComponent {
+
+
+export class LoginComponent {
   username: string = '';
   password: string = '';
 
@@ -26,3 +28,4 @@ export class CompetitorLoginComponent {
     this.authService.logout();
   }
 }
+

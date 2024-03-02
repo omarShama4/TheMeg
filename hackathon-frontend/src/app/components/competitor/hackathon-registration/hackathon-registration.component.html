@@ -1,1 +1,38 @@
-<p>hackathon-registration works!</p>
+<h2>Hackathon Registration for Hackathon <h1>{{hackathonId}}</h1></h2>
+<form (ngSubmit)="register()">
+  <div>
+    <label for="teamName">Team Name:</label>
+    <input type="text" id="teamName" name="teamName" [(ngModel)]="teamName">
+  </div>
+  <div>
+    <label for="challenges">Challenges:</label>
+    <textarea id="challenges" name="challenges" [(ngModel)]="challenges"></textarea>
+  </div>
+  <div>
+    <h3>Team Members:</h3>
+    <div *ngFor="let member of teamMembers; let i = index">
+      <h4>Member {{ i + 1 }}</h4>
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" [(ngModel)]="member.title">
+      </div>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="member.name">
+      </div>
+      <div>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" [(ngModel)]="member.id">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="member.email">
+      </div>
+      <div>
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile" [(ngModel)]="member.mobile">
+      </div>
+    </div>
+  </div>
+  <button type="submit">Register</button>
+</form>
