@@ -7,11 +7,20 @@ import { Hackathon } from '../models/hackathon.model';
   providedIn: 'root'
 })
 export class HackathonService {
-  private apiUrl = 'http://localhost:3000/hackathons'; // Replace with your backend API URL
+  private apiUrl = 'http://localhost:3000/hackathons';
 
   constructor(private http: HttpClient) { }
 
   getHackathons(): Observable<Hackathon[]> {
     return this.http.get<Hackathon[]>(this.apiUrl);
+  }
+
+  addHackathon(hackathon: Hackathon): Observable<any> {
+    return this.http.post(this.apiUrl, hackathon);
+  }
+
+  getHackathonById(id: number): Observable<Hackathon> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Hackathon>(url);
   }
 }

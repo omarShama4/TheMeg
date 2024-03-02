@@ -10,6 +10,8 @@ import { HackathonService } from 'src/app/services/hackathon.service';
 export class ViewHackathonsComponent implements OnInit {
 
   hackathons: Hackathon[] = [];
+  selectedHackathonId!: number;
+  selected: boolean = false
 
   constructor(private hackathonService: HackathonService) { }
 
@@ -26,5 +28,11 @@ export class ViewHackathonsComponent implements OnInit {
         console.error('Error loading hackathons:', error);
       }
     );
+  }
+
+  selectHackathon(id: number): void {
+    this.selectedHackathonId = id;
+    this.selected = true
+    console.log(this.selected)
   }
 }

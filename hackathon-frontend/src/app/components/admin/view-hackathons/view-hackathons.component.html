@@ -1,8 +1,8 @@
-<div class="hackathon-list">
+<div class="hackathon-list" *ngIf="!selected">
     <h2>Available Hackathons</h2>
     <ul>
       <li *ngFor="let hackathon of hackathons">
-        <div class="hackathon-item">
+        <div class="hackathon-item" (click)="selectHackathon(hackathon.id)">
           <h3>{{ hackathon.name }}</h3>
           <p><strong>Theme:</strong> {{ hackathon.theme }}</p>
           <p><strong>Registration Dates:</strong> {{ hackathon.registration_date_range }}</p>
@@ -17,4 +17,7 @@
         </div>
       </li>
     </ul>
+</div>
+  <div *ngIf="selected">
+    <app-hackathon-details [id]="selectedHackathonId"></app-hackathon-details>
   </div>

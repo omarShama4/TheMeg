@@ -1,0 +1,12 @@
+<div *ngIf="hackathon">
+    <h2>{{ hackathon.name }}</h2>
+    <p><strong>Theme:</strong> {{ hackathon.theme }}</p>
+    <p><strong>Registration Dates:</strong> {{ hackathon.registration_date_range }}</p>
+    <p><strong>Event Date:</strong> {{ hackathon.event_date }}</p>
+    <p><strong>Challenges:</strong></p>
+    <ul>
+      <li *ngFor="let challenge of hackathon.challenges">{{ challenge }}</li>
+    </ul>
+    <p><strong>Maximum Team Size:</strong> {{ hackathon.max_team_size }}</p>
+    <p><strong>Maximum Number of Teams:</strong> {{ hackathon.max_teams }}</p>
+  </div>
